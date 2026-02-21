@@ -22,8 +22,8 @@ export default function ContactPage() {
                                     <h3 className="text-xl font-black uppercase tracking-wider">Address</h3>
                                 </div>
                                 <p className="text-brand-muted text-lg">
-                                    Belgrade, Serbia<br />
-                                    11000 Centar
+                                    Bulevar Kralja Aleksandra 43<br />
+                                    11000 Belgrade, Serbia
                                 </p>
                             </section>
 
@@ -74,14 +74,25 @@ export default function ContactPage() {
                     </div>
 
                     {/* Map Side */}
-                    <div className="relative h-[600px] bg-brand-charcoal overflow-hidden group">
-                        <div className="absolute inset-0 bg-brand-red/10 group-hover:bg-transparent transition-all duration-700"></div>
-                        <div className="w-full h-full flex items-center justify-center text-center p-12">
-                            <div className="space-y-4">
-                                <MapPin size={48} className="mx-auto text-brand-red animate-pulse" />
-                                <h4 className="text-2xl font-black uppercase tracking-widest">Interactive Map</h4>
-                                <p className="text-brand-muted text-sm italic">Connecting to local coordinates...</p>
-                            </div>
+                    <div className="relative h-[600px] bg-brand-charcoal overflow-hidden border border-white/10 group">
+                        <iframe
+                            title="Gorilla Burger Bar Location"
+                            className="w-full h-full grayscale invert-[0.9] opacity-60 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-700"
+                            src="https://www.openstreetmap.org/export/embed.html?bbox=20.465,44.805,20.475,44.811&amp;layer=mapnik&amp;marker=44.8080,20.4700"
+                            frameBorder="0"
+                            scrolling="no"
+                            marginHeight="0"
+                            marginWidth="0"
+                        ></iframe>
+                        <div className="absolute top-4 right-4 z-10">
+                            <a
+                                href="https://www.openstreetmap.org/?mlat=44.8080&amp;mlon=20.4700#map=17/44.8080/20.4700"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="btn-premium px-4 py-2 text-[10px]"
+                            >
+                                View Larger
+                            </a>
                         </div>
                     </div>
                 </div>
